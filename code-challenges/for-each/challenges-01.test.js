@@ -55,11 +55,19 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const removeOne = (num, arr) => {
-  // Solution code here...
+  let newArr = arr;
+  if (num % 3 === 2) {
+      newArr.pop();
+  }
+  return newArr;
 };
 
 const removeElements = (arr, callback) => {
-  // Solution code here...
+  let newArr = arr;
+  for (let i = 0 ; i < arr.length ; i++) {
+    newArr = callback(i + 1, newArr);
+  }
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -69,7 +77,11 @@ Write a function named removeWithForEach that produces the same output as challe
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithForEach = (arr, callback) => {
-  // Solution code here...
+  let newArr = arr;
+  newArr.forEach(element => {
+    newArr = callback(element, newArr);
+  });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -83,8 +95,17 @@ This anonymous function should accept up to three arguments: the element, the in
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithAnon = (arr) => {
-  // Solution code here...
-};
+  let newArr = arr;
+  newArr.forEach(function(element, index, array) {
+    if (element % 3 === 2) {
+      array.pop();
+    }
+  newArr = array;
+
+  });
+  return newArr;
+}
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -104,7 +125,13 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
+  let groceryList = [];
+  availableItems.forEach(function(element) {
+    if (element.available === true) {
+      groceryList.push(element.name);
+    }
+  });
+  return groceryList;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -122,7 +149,20 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  let fizzbuzzReturn = [];
+  arr.forEach(function(element) {
+    let fizzbuzzEl = '';
+    if (element % 15 === 0) {
+      fizzbuzzReturn.push('Fizz Buzz');
+    } else if (element % 3 === 0) {
+      fizzbuzzReturn.push('Fizz');
+    } else if (element % 5 === 0) {
+      fizzbuzzReturn.push('Buzz');
+    } else {
+      fizzbuzzReturn.push(element);
+    }
+  });
+return fizzbuzzReturn;
 };
 
 /* ------------------------------------------------------------------------------------------------
