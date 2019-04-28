@@ -85,8 +85,8 @@ const listFoods = (recipe) => {
   let result = [];
   let regEx = /^[0-9][0-9]* \w[\w-]* /;
 
-  for (let i = 0 ; i < gruffaloCrumble.ingredients.length ; i++) {
-    result.push(gruffaloCrumble.ingredients[i].replace(regEx, ''));
+  for (let i = 0 ; i < recipe.ingredients.length ; i++) {
+    result.push(recipe.ingredients[i].replace(regEx, ''));
   }
   return result;
 };
@@ -102,8 +102,8 @@ You may also use other string or array methods.
 const splitFoods = (recipe) => {
   let result = [];
 
-  for (let i = 0 ; i < gruffaloCrumble.ingredients.length ; i++) {
-    let thisSplit = gruffaloCrumble.ingredients[i].split(' ');
+  for (let i = 0 ; i < recipe.ingredients.length ; i++) {
+    let thisSplit = recipe.ingredients[i].split(' ');
     result[i] = thisSplit[2];
 
     for (let j = 3 ; j < thisSplit.length ; j++) {
@@ -127,8 +127,8 @@ const stepActions = (recipe) => {
   let result = [];
   let regEx = /^\w[\w-]*/;
 
-  for (let i = 0 ; i < gruffaloCrumble.steps.length ; i++) {
-    result.push(gruffaloCrumble.steps[i].match(regEx)[0]);
+  for (let i = 0 ; i < recipe.steps.length ; i++) {
+    result.push(recipe.steps[i].match(regEx)[0]);
   }
   return result;
 };
