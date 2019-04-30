@@ -83,7 +83,7 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  let regEx = /^[0-9][0-9]* \w[\w-]* /;
+  let regEx = /^[0-9]+ [\w-]+ /;
 
   for (let i = 0 ; i < recipe.ingredients.length ; i++) {
     result.push(recipe.ingredients[i].replace(regEx, ''));
