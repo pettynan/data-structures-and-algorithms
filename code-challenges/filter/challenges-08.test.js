@@ -94,7 +94,7 @@ For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 
 const getStatName = (arr, minBaseStat) => {
   let statObjects = []
   statObjects =  arr.filter(x => x.baseStat > minBaseStat);
-  return statObjects;
+  return statObjects.map(x => x.stat.name);
 
 };
 
@@ -148,7 +148,7 @@ const characters = [
 ];
 
 const getCharactersWithoutChildren = (arr) => {
-  // Solution code here...
+  return arr.filter(x => !x.children);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -160,7 +160,13 @@ For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 
 ------------------------------------------------------------------------------------------------ */
 
 const evenOddNumericValues = (arr) => {
-  // Solution code here...
+  return arr.filter(x => /[0-9]+/.test(x) && x === parseInt(x)).map(x => {
+    if (x % 2 === 0) {
+      return 'even';
+    } else {
+      return 'odd';
+    }
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
