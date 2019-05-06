@@ -13,10 +13,8 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 
 const count = (target, input) => {
   if (input.length === 0) {
-    console.log('returned 0');
     return 0;
   } else {
-    console.log(input);
     return input.map( x => {
       let innerCount = 0;
       for (let i = 0 ; i < x.length ; i++) {
