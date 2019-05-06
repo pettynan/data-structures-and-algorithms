@@ -130,7 +130,7 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 
 let findShortest = (data) => {
   return data.reduce( (current, ansSoFar) => {
-    if (ansSoFar.height > current.height) {
+    if (parseInt(ansSoFar.height) < parseInt(current.height)) {
       return ansSoFar;
     } else {
       return current;
