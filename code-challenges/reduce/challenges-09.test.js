@@ -84,8 +84,11 @@ Write a function named reversedString that takes in a string and returns a strin
 Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
 ------------------------------------------------------------------------------------------------ */
 
-const reversedString = (arr) => {
-  // Solution code here...
+const reversedString = (str) => {
+  let arr = str.split('');
+  return arr.reduce((ansSoFar, current) => {
+    return `${current}${ansSoFar}`
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -138,7 +141,13 @@ const characters = [
 ];
 
 const countNumberOfChildren = (arr) => {
-  // Solution code here...
+  return arr.reduce((ansSoFar, current) => {
+    if (current.children) {
+    return ansSoFar + current.children.length;
+    } else {
+      return ansSoFar;
+    }
+  }, 0)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -150,7 +159,13 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
 const calculateAverage = (arr) => {
-  // Solution code here...
+  let obj = arr.reduce( (ansSoFar, current) => {
+    ansSoFar.count ++;
+    ansSoFar.sum += current;
+    return ansSoFar;
+  }, {count:0, sum:0})
+
+  return (obj.sum / obj.count);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -171,7 +186,13 @@ const isPrime = (value) => {
 };
 
 const countPrimeNumbers = (arr) => {
-  // Solution code here...
+  return arr.reduce( (ansSoFar, current) => {
+    if (isPrime(current)) {
+      return ansSoFar += 1;
+    } else {
+      return ansSoFar;
+    }
+  }, 0)
 };
 
 /* ------------------------------------------------------------------------------------------------
