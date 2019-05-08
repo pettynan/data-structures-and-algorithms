@@ -30,7 +30,7 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 ------------------------------------------------------------------------------------------------ */
 
 const validateEmail = (email) => {
-  let regEx = /^[\w0-9]+(.[\w0-9]+)?@codefellows[(.net$)(.com$)(.org$)]/;
+  let regEx = /^\w+(.\w+)?@codefellows.[(net$)(com$)(org$)]/;
   return regEx.test(email);
 };
 
