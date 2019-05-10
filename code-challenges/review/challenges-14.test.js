@@ -8,11 +8,7 @@ Write a function named toTitleCase that takes in an array of strings and returns
 For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyver'].
 ------------------------------------------------------------------------------------------------ */
 
-const toTitleCase = (arr) => {
-  return arr.map(x => {
-    return x.slice(0, 1).toUpperCase().concat(x.slice(1, x.length));
-  });
-};
+const toTitleCase = (arr) => arr.map(x => x.slice(0, 1).toUpperCase().concat(x.slice(1, x.length)));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -160,8 +156,8 @@ const detectTicTacToeWin = (board) => {
   let sq8 = {row: 2, col: 1};
   let sq9 = {row: 2, col: 2};
 
-  let checkThree = (chk1, chk2, chk2) => {
-    return (board[chk1.row][chk1.col] !== '' && board[chk1.row][chk1.col] === board[chk2.row][chk2.col] && board[chk2.row][chk2.col] === board[chk2.row][chk2.col]);
+  let checkThree = (chk1, chk2, chk3) => {
+    return (board[chk1.row][chk1.col] !== '' && board[chk1.row][chk1.col] === board[chk2.row][chk2.col] && board[chk2.row][chk2.col] === board[chk3.row][chk3.col]);
   };
 
   let winCons = [
