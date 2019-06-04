@@ -78,4 +78,79 @@ public class LinkedListTest {
     // Other tests I would want to write if I spent more time:
     // handling for bad input values to all 3 functions
     // testing when the same value is inserted multiple times
+
+    @Test
+    public void testAppends() {
+        LinkedList init = new LinkedList();
+
+        init.insert(5);
+        init.insert(1);
+        init.insert(4);
+        init.insert(8);
+        init.insert(6);
+        init.insert(4);
+        init.insert(2);
+        init.insert(3);
+
+        init.append(10);
+
+        String expectedString = "[3, 2, 4, 6, 8, 4, 1, 5, 0, 10]";
+        String outputString = init.print().toString();
+
+        assertEquals("The method should print an ArrayList equivalent to the above array.",
+                expectedString,
+                outputString
+        );
+    }
+
+    @Test
+    public void testInsertBefore() {
+        LinkedList init = new LinkedList();
+
+        init.insert(5);
+        init.insert(1);
+        init.insert(4);
+        init.insert(8);
+        init.insert(6);
+        init.insert(2);
+        init.insert(3);
+
+        init.insertBefore(8, 10);
+
+        String expectedString = "[3, 2, 6, 10, 8, 4, 1, 5, 0]";
+        String outputString = init.print().toString();
+
+        assertEquals("The method should print an ArrayList equivalent to the above array.",
+                expectedString,
+                outputString
+        );
+
+    }
+
+    @Test
+    public void testInsertAfter() {
+        LinkedList init = new LinkedList();
+
+        init.insert(5);
+        init.insert(1);
+        init.insert(4);
+        init.insert(8);
+        init.insert(6);
+        init.insert(2);
+        init.insert(3);
+
+        init.insertAfter(8, 10);
+
+        String expectedString = "[3, 2, 6, 8, 10, 4, 1, 5, 0]";
+        String outputString = init.print().toString();
+
+        assertEquals("The method should print an ArrayList equivalent to the above array.",
+                expectedString,
+                outputString
+        );
+    }
+    // Given more time I would test:
+    // - Response when target value is not found in LL
+    // - Behavior when target value is the first or last value in LL
+    // - Behavior of append when LL is empty
 }
