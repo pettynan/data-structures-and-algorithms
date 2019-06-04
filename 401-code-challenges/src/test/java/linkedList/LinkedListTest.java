@@ -47,7 +47,7 @@ public class LinkedListTest {
 
         System.out.println(initForTest.print());
 
-        for (int i = 1 ; i < 10 ; i++) {
+        for (int i = 0 ; i < 10 ; i++) {
             initForTest.insert(i);
         }
 
@@ -65,10 +65,10 @@ public class LinkedListTest {
     public void testPrint_empty() {
         LinkedList initForTest = new LinkedList();
 
-        String expectedString = "[0]";
+        String expectedString = "[]";
         String outputString = initForTest.print().toString();
 
-        assertEquals("The method should print the default empty node, [0]",
+        assertEquals("The method should an empty array for an empty LL, []",
                 expectedString,
                 outputString
         );
@@ -94,7 +94,7 @@ public class LinkedListTest {
 
         init.append(10);
 
-        String expectedString = "[3, 2, 4, 6, 8, 4, 1, 5, 0, 10]";
+        String expectedString = "[3, 2, 4, 6, 8, 4, 1, 5, 10]";
         String outputString = init.print().toString();
 
         assertEquals("The method should print an ArrayList equivalent to the above array.",
@@ -117,7 +117,7 @@ public class LinkedListTest {
 
         init.insertBefore(8, 10);
 
-        String expectedString = "[3, 2, 6, 10, 8, 4, 1, 5, 0]";
+        String expectedString = "[3, 2, 6, 10, 8, 4, 1, 5]";
         String outputString = init.print().toString();
 
         assertEquals("The method should print an ArrayList equivalent to the above array.",
@@ -141,7 +141,7 @@ public class LinkedListTest {
 
         init.insertAfter(8, 10);
 
-        String expectedString = "[3, 2, 6, 8, 10, 4, 1, 5, 0]";
+        String expectedString = "[3, 2, 6, 8, 10, 4, 1, 5]";
         String outputString = init.print().toString();
 
         assertEquals("The method should print an ArrayList equivalent to the above array.",
