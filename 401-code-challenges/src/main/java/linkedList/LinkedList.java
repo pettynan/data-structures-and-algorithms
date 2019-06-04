@@ -15,7 +15,7 @@ public class LinkedList {
         }
     }
 
-    public Node head = new Node(0, null);
+    public Node head;
 
     public void insert(int value) {
         head = new Node(value, this.head);
