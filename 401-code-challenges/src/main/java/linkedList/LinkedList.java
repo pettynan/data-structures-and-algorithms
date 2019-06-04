@@ -22,7 +22,7 @@ public class LinkedList {
     }
 
     public boolean includes(int value) {
-        Node currentNode = this.head;
+        Node currentNode = head;
 
         while (currentNode != null) {
             if (currentNode.value == value) {
@@ -37,7 +37,7 @@ public class LinkedList {
     public ArrayList<Integer> print() {
         ArrayList<Integer> printList = new ArrayList<>();
 
-        Node currentNode = this.head;
+        Node currentNode = head;
 
         while (currentNode != null) {
             printList.add(currentNode.value);
@@ -46,4 +46,53 @@ public class LinkedList {
 
         return printList;
     }
+
+    public void append(int value) {
+        Node newNode = new Node(value, null);
+
+        if (head == null){
+            head = newNode;
+            return;
+        }
+
+        Node currentNode = head;
+        while (currentNode.next != null) {
+            currentNode = currentNode.next;
+        }
+        currentNode.next = newNode;
+    }
+
+    public void insertBefore(int target, int value) {
+        Node currentNode = head;
+
+        if (head.value == target) {
+            this.insert(value);
+            return;
+        }
+        while (currentNode.next != null) {
+            if (currentNode.next.value == target) {
+                Node newNode = new Node(value, currentNode.next);
+                currentNode.next = newNode;
+                return;
+            }
+            currentNode = currentNode.next;
+        }
+    }
+
+    public void insertAfter(int target, int value) {
+        Node currentNode = head;
+
+        while (currentNode != null) {
+            if (currentNode.value == target) {
+                Node newNode = new Node(value, currentNode.next);
+                currentNode.next = newNode;
+                return;
+            }
+            currentNode = currentNode.next;
+        }
+    }
+
+
+
+
 }
