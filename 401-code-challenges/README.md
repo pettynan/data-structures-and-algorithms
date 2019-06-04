@@ -1,8 +1,8 @@
 # 401 Code Challenges
 
 ## Contents
-  [Shift Array](https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/src/main/java/ArrayShift.java)
-  [Array Binary Search](https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/src/main/java/ArrayBinarySearch.java)
+  [Shift Array](https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/src/main/java/ArrayShift.java) <br/>
+  [Array Binary Search](https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/src/main/java/ArrayBinarySearch.java) <br/>
   ### [Linked List](https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/src/main/java/linkedList)
     insert
     includes
