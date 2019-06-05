@@ -153,4 +153,84 @@ public class LinkedListTest {
     // - Response when target value is not found in LL
     // - Behavior when target value is the first or last value in LL
     // - Behavior of append when LL is empty
+
+    @Test
+    public void testKthFromEnd() {
+        LinkedList init = new LinkedList();
+
+        init.insert(5);
+        init.insert(1);
+        init.insert(4);
+        init.insert(8);
+        init.insert(6);
+        init.insert(2);
+        init.insert(3);
+
+        assertEquals("The method should find the 3rd value from the end, and return 8",
+                8,
+                init.kthFromEnd(3)
+        );
+    }
+
+    @Test (expected = IllegalArgumentException.class)
+    public void testKthFromEnd_sizeEqualsK() {
+        LinkedList init = new LinkedList();
+
+        init.insert(5);
+        init.insert(1);
+        init.insert(4);
+        init.insert(8);
+        init.insert(6);
+        init.insert(2);
+        init.insert(3);
+
+        init.kthFromEnd(7);
+        System.out.print("The method should fail to find the 7th node from the end, and return an illegal arg exception.");
+    }
+
+    @Test (expected = IllegalArgumentException.class)
+    public void testKthFromEnd_sizeLessThanK() {
+        LinkedList init = new LinkedList();
+
+        init.insert(5);
+        init.insert(1);
+        init.insert(4);
+        init.insert(8);
+        init.insert(6);
+        init.insert(2);
+        init.insert(3);
+
+        init.kthFromEnd(10);
+        System.out.print("The method should fail to find the 10th node from the end, and return an illegal arg exception.");
+    }
+
+    @Test (expected = IllegalArgumentException.class)
+    public void testKthFromEnd_kIsNegative() {
+        LinkedList init = new LinkedList();
+
+        init.insert(5);
+        init.insert(1);
+        init.insert(4);
+        init.insert(8);
+        init.insert(6);
+        init.insert(2);
+        init.insert(3);
+
+        assertEquals("The method should detect a negative input, and return an illegal arg exception.",
+                8,
+                init.kthFromEnd(-3)
+        );
+    }
+
+    @Test
+    public void testKthFromEnd_sizeOfLLis1() {
+        LinkedList init = new LinkedList();
+
+        init.insert(5);
+
+        assertEquals("The method should find the node that is 0 steps from the end, and return its value of 5.",
+                5,
+                init.kthFromEnd(0)
+        );
+    }
 }
