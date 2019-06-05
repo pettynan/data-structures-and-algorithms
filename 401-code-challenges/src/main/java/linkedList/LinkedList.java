@@ -92,6 +92,34 @@ public class LinkedList {
         }
     }
 
+    public int kthFromEnd(int k) {
+        if (k < 0) {
+            throw new IllegalArgumentException("k cannot be a negative integer");
+        }
+        int size = 0;
+        Node currentNode = head;
+
+        while (currentNode != null) {
+            size++;
+            currentNode = currentNode.next;
+        }
+        int deltaK = size - k - 1;
+
+        if (deltaK < 0) {
+            throw new IllegalArgumentException("k exceeds the size of linked list");
+//        } else if (deltaK == 0) {
+//            return head.value;
+        } else {
+            currentNode = head;
+            for (int i = 0 ; i < deltaK ; i++) {
+                currentNode = currentNode.next;
+            }
+            return currentNode.value;
+        }
+
+
+    }
+
 
 
 
