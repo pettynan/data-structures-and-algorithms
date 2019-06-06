@@ -120,7 +120,22 @@ public class LinkedList {
 
     }
 
-
-
-
+    public LinkedList mergeLists(LinkedList list1, LinkedList list2) {
+        Node currentL1 = list1.head;
+        Node currentL2 = list2.head;
+        if (currentL1 == null) {
+            return list2;
+        }
+        while (currentL1 != null && currentL2 != null) {
+            Node temp1 = currentL1.next;
+            Node temp2 = currentL2.next;
+            currentL1.next = currentL2;
+            if (temp1 != null) {
+                currentL2.next = temp1;
+            }
+            currentL1 = temp1;
+            currentL2 = temp2;
+        }
+        return list1;
+    }
 }

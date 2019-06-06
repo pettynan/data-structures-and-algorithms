@@ -5,6 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class LinkedListTest {
+    private LinkedList init = new LinkedList();
 
     @Test
     public void testInsert() {
@@ -81,7 +82,6 @@ public class LinkedListTest {
 
     @Test
     public void testAppends() {
-        LinkedList init = new LinkedList();
 
         init.insert(5);
         init.insert(1);
@@ -105,7 +105,6 @@ public class LinkedListTest {
 
     @Test
     public void testInsertBefore() {
-        LinkedList init = new LinkedList();
 
         init.insert(5);
         init.insert(1);
@@ -129,7 +128,6 @@ public class LinkedListTest {
 
     @Test
     public void testInsertAfter() {
-        LinkedList init = new LinkedList();
 
         init.insert(5);
         init.insert(1);
@@ -156,7 +154,6 @@ public class LinkedListTest {
 
     @Test
     public void testKthFromEnd() {
-        LinkedList init = new LinkedList();
 
         init.insert(5);
         init.insert(1);
@@ -174,7 +171,6 @@ public class LinkedListTest {
 
     @Test (expected = IllegalArgumentException.class)
     public void testKthFromEnd_sizeEqualsK() {
-        LinkedList init = new LinkedList();
 
         init.insert(5);
         init.insert(1);
@@ -190,7 +186,6 @@ public class LinkedListTest {
 
     @Test (expected = IllegalArgumentException.class)
     public void testKthFromEnd_sizeLessThanK() {
-        LinkedList init = new LinkedList();
 
         init.insert(5);
         init.insert(1);
@@ -206,7 +201,6 @@ public class LinkedListTest {
 
     @Test (expected = IllegalArgumentException.class)
     public void testKthFromEnd_kIsNegative() {
-        LinkedList init = new LinkedList();
 
         init.insert(5);
         init.insert(1);
@@ -224,7 +218,7 @@ public class LinkedListTest {
 
     @Test
     public void testKthFromEnd_sizeOfLLis1() {
-        LinkedList init = new LinkedList();
+
 
         init.insert(5);
 
@@ -232,5 +226,129 @@ public class LinkedListTest {
                 5,
                 init.kthFromEnd(0)
         );
+    }
+
+    @Test
+    public void testMergeList_happy() {
+        LinkedList list1 = new LinkedList();
+        list1.insert(1);
+        list1.insert(1);
+        list1.insert(1);
+
+        LinkedList list2 = new LinkedList();
+        list2.insert(2);
+        list2.insert(2);
+        list2.insert(2);
+
+        String expectedString = "[1, 2, 1, 2, 1, 2]";
+        String outputString = init.mergeLists(list1, list2).print().toString();
+
+        assertEquals("The method should produce a linked list that prints an output equal to the above string.",
+                expectedString,
+                outputString
+        );
+    }
+    @Test
+    public void testMergeList_list1Null() {
+        LinkedList list1 = new LinkedList();
+
+        LinkedList list2 = new LinkedList();
+        list2.insert(2);
+        list2.insert(2);
+        list2.insert(2);
+
+        String expectedString = "[2, 2, 2]";
+        String outputString = init.mergeLists(list1, list2).print().toString();
+
+        assertEquals("The method should produce a linked list that prints an output equal to the above string.",
+                expectedString,
+                outputString
+        );
+
+    }
+
+    @Test
+    public void testMergeList_list2Null() {
+        LinkedList list1 = new LinkedList();
+        list1.insert(1);
+        list1.insert(1);
+        list1.insert(1);
+
+        LinkedList list2 = new LinkedList();
+
+        String expectedString = "[1, 1, 1]";
+        String outputString = init.mergeLists(list1, list2).print().toString();
+
+        assertEquals("The method should produce a linked list that prints an output equal to the above string.",
+                expectedString,
+                outputString
+        );
+
+    }
+
+    @Test
+    public void testMergeList_list1IsLonger() {
+        LinkedList list1 = new LinkedList();
+        list1.insert(1);
+        list1.insert(1);
+        list1.insert(1);
+        list1.insert(1);
+        list1.insert(1);
+        list1.insert(1);
+
+        LinkedList list2 = new LinkedList();
+        list2.insert(2);
+        list2.insert(2);
+        list2.insert(2);
+
+        String expectedString = "[1, 2, 1, 2, 1, 2, 1, 1, 1]";
+        String outputString = init.mergeLists(list1, list2).print().toString();
+
+        assertEquals("The method should produce a linked list that prints an output equal to the above string.",
+                expectedString,
+                outputString
+        );
+
+    }
+
+    @Test
+    public void testMergeList_list2IsLonger() {
+        LinkedList list1 = new LinkedList();
+        list1.insert(1);
+        list1.insert(1);
+        list1.insert(1);
+
+        LinkedList list2 = new LinkedList();
+        list2.insert(2);
+        list2.insert(2);
+        list2.insert(2);
+        list2.insert(2);
+        list2.insert(2);
+        list2.insert(2);
+
+        String expectedString = "[1, 2, 1, 2, 1, 2, 2, 2, 2]";
+        String outputString = init.mergeLists(list1, list2).print().toString();
+
+        assertEquals("The method should produce a linked list that prints an output equal to the above string.",
+                expectedString,
+                outputString
+        );
+
+    }
+
+    @Test
+    public void testMergeList_bothNull() {
+        LinkedList list1 = new LinkedList();
+
+        LinkedList list2 = new LinkedList();
+
+        String expectedString = "[]";
+        String outputString = init.mergeLists(list1, list2).print().toString();
+
+        assertEquals("The method should produce a linked list that prints an output equal to the above string.",
+                expectedString,
+                outputString
+        );
+
     }
 }
