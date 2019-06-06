@@ -4,14 +4,14 @@
   [Shift Array](https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/src/main/java/ArrayShift.java) <br/>
   [Array Binary Search](https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/src/main/java/ArrayBinarySearch.java) <br/>
   ### [Linked List](https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/src/main/java/linkedList)
-    insert
+    [insert](https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/assets/LL_insert_whiteboard.jpg)
     includes
     print
     append
     insertBefore
     insertAfter
-    kthFromEnd
-    mergeLists
+    [kthFromEnd](https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/assets/LL_kthFromEnd_whiteboard.jpg)
+    [mergeLists](https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/assets/LL_mergeLists_whiteboard.jpg)
 ## Change Log
   2019/05/29 - Repository created <br/>
   2019/05/29 - Shift Array app created <br/>
