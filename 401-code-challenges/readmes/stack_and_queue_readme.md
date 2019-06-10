@@ -1,6 +1,5 @@
-# Stacks and Queues
-<!-- Short summary or background information -->
-
+# [Stacks and Queues](https://github.com/pettynan/data-structures-and-algorithms/tree/master/401-code-challenges/src/main/java/stacksandqueues)
+https://github.com/pettynan/data-structures-and-algorithms/tree/master/401-code-challenges/src/main/java/stacksandqueues
 ## Challenge
 Create a Queue and a Stack class, which behave as queues and stacks.
 
