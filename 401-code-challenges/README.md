@@ -4,14 +4,20 @@
   [Shift Array](https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/src/main/java/ArrayShift.java) <br/>
   [Array Binary Search](https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/src/main/java/ArrayBinarySearch.java) <br/>
   ### [Linked List](https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/src/main/java/linkedList)
-    [insert](https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/assets/LL_insert_whiteboard.jpg)
+    insert
     includes
     print
     append
     insertBefore
     insertAfter
-    [kthFromEnd](https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/assets/LL_kthFromEnd_whiteboard.jpg)
-    [mergeLists](https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/assets/LL_mergeLists_whiteboard.jpg)
+    kthFromEnd
+    mergeLists
+  ### [Stacks and Queues](https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/readmes/stack_and_queue_readme.md)
+    Node
+    Stack
+    - push, pop, peek
+    Queue
+    - enqueue, dequeue, peek
 ## Change Log
   2019/05/29 - Repository created <br/>
   2019/05/29 - Shift Array app created <br/>
@@ -19,4 +25,5 @@
   2019/06/03 - Linked List app created <br/>
   2019/06/04 - Added new classes to Linked List <br/>
   2019/06/05 - Added new class to Linked List <br/>
-  2019/06/06 - Added new class to Linked List
+  2019/06/06 - Added new class to Linked List <br/>
+  2019/06/10 - Stacks and Queues app created
