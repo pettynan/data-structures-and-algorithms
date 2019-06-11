@@ -18,6 +18,8 @@
     - push, pop, peek
     Queue
     - enqueue, dequeue, peek
+    PseudoQueue
+    - enqueue, dequeue, peek
 ## Change Log
   2019/05/29 - Repository created <br/>
   2019/05/29 - Shift Array app created <br/>
@@ -26,4 +28,5 @@
   2019/06/04 - Added new classes to Linked List <br/>
   2019/06/05 - Added new class to Linked List <br/>
   2019/06/06 - Added new class to Linked List <br/>
-  2019/06/10 - Stacks and Queues app created
+  2019/06/10 - Stacks and Queues app created <br/>
+  2019/06/11 - Added PseudoQueue class

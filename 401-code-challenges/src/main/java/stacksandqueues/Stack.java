@@ -1,7 +1,7 @@
 package stacksandqueues;
 
 public class Stack {
-    private Node top;
+    protected Node top;
 
     public Stack() { this.top = null; }
 
