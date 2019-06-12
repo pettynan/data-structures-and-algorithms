@@ -20,6 +20,7 @@
     - enqueue, dequeue, peek
     PseudoQueue
     - enqueue, dequeue, peek
+  ### [Animal Shelter](https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/readmes/animal_shelter_readme.md)
 ## Change Log
   2019/05/29 - Repository created <br/>
   2019/05/29 - Shift Array app created <br/>
@@ -29,4 +30,5 @@
   2019/06/05 - Added new class to Linked List <br/>
   2019/06/06 - Added new class to Linked List <br/>
   2019/06/10 - Stacks and Queues app created <br/>
-  2019/06/11 - Added PseudoQueue class
+  2019/06/11 - Added PseudoQueue class <br/>
+  2019/06/12 - Added AnimalShelter package

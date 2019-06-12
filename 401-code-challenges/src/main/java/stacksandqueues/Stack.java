@@ -1,7 +1,7 @@
 package stacksandqueues;
 
-public class Stack {
-    protected Node top;
+public class Stack<T> {
+    Node<T> top;
 
     public Stack() { this.top = null; }
 
@@ -9,18 +9,18 @@ public class Stack {
         return this.top;
     }
 
-    public void push(int value) {
+    public void push(T value) {
         this.top = new Node(value, this.top);
 
     }
 
-    public int pop() {
-        int returnValue = this.top.value;
+    public T pop() {
+        T returnValue = this.top.value;
         this.top = this.top.next;
         return returnValue;
     }
 
-    public int peek() {
+    public T peek() {
         return this.top.value;
     }
 
