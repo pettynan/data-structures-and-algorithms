@@ -1,15 +1,15 @@
 package stacksandqueues;
 
-public class PseudoQueue {
-    private Stack stackMain = new Stack();
+public class PseudoQueue<T> {
+    private Stack<T> stackMain = new Stack<>();
 
 
-    public void enqueue(int value) {
+    public void enqueue(T value) {
 
 //        if (stackMain.top == null) {
 //            stackMain.push(value);
 //        } else {
-            Stack stackTemp = new Stack();
+            Stack<T> stackTemp = new Stack<>();
 
             while (stackMain.top != null) {
                 stackTemp.push(stackMain.pop());
@@ -21,11 +21,11 @@ public class PseudoQueue {
 //        }
     }
 
-    public int dequeue() {
+    public T dequeue() {
         return stackMain.pop();
     }
 
-    public int peek() {
+    public T peek() {
         try {
             return stackMain.top.value;
         } catch (NullPointerException e) {
