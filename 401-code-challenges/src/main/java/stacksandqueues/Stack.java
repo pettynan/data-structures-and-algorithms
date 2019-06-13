@@ -21,6 +21,9 @@ public class Stack<T> {
     }
 
     public T peek() {
+        if (this.top == null) {
+            return null;
+        }
         return this.top.value;
     }
 
