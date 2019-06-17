@@ -22,6 +22,11 @@
     - enqueue, dequeue, peek
   ### [Animal Shelter](https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/readmes/animal_shelter_readme.md)
   ### [Multi Bracket Validation](https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/readmes/multi_bracket_validation.md)
+  ### [Tree]((https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/readmes/tree.md))
+    Binary Tree traversals
+    - preOrder, inOrder, postOrder
+    Binary Search Tree methods
+    - add, contains
 ## Change Log
   2019/05/29 - Repository created <br/>
   2019/05/29 - Shift Array app created <br/>
@@ -33,4 +38,5 @@
   2019/06/10 - Stacks and Queues app created <br/>
   2019/06/11 - Added PseudoQueue class <br/>
   2019/06/12 - Added AnimalShelter package <br/>
-  2019/06/13 - Added MultiBracketValidation package
+  2019/06/13 - Added MultiBracketValidation package <br/>
+  2019/06/17 - Added tree package
