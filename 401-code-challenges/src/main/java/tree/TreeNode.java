@@ -1,10 +1,11 @@
 package tree;
 
-public class TreeNode {
-    private int value;
-    private TreeNode leftChild;
+public class TreeNode<T> {
+    public T value;
+    private TreeNode<T> leftChild;
+    private TreeNode<T> rightChild;
 
-    public void setValue(int value) {
+    public void setValue(T value) {
         this.value = value;
     }
 
@@ -16,24 +17,22 @@ public class TreeNode {
         this.rightChild = rightChild;
     }
 
-    private TreeNode rightChild;
-
-    public int getValue() {
+    public T getValue() {
         return value;
     }
 
-    public TreeNode getLeftChild() {
+    public TreeNode<T> getLeftChild() {
         return leftChild;
     }
 
-    public TreeNode getRightChild() {
+    public TreeNode<T> getRightChild() {
         return rightChild;
     }
 
 
 
     public TreeNode() {}
-    public TreeNode(int value) {
+    public TreeNode(T value) {
         this.value = value;
         this.leftChild = null;
         this.rightChild = null;
