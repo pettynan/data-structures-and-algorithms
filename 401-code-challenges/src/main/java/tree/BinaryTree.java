@@ -2,22 +2,22 @@ package tree;
 
 import java.util.ArrayList;
 
-public class BinaryTree {
-    protected TreeNode root;
+public class BinaryTree<T> {
+    public TreeNode<T> root;
     private ArrayList array;
 
     public BinaryTree() {}
-    public BinaryTree(TreeNode root) {
+    public BinaryTree(TreeNode<T> root) {
         this.root = root;
     }
 
 
 
     // ArrayList<T> outputArray = new ArrayList<>();
-    public ArrayList preOrder(TreeNode root) {
+    public ArrayList preOrder(BinaryTree tree) {
         array = new ArrayList();
 
-        preOrderHelper(root);
+        preOrderHelper(tree.root);
 
         return this.array;
     }
