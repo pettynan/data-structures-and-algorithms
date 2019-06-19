@@ -24,9 +24,10 @@
   ### [Multi Bracket Validation](https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/readmes/multi_bracket_validation.md)
   ### [Tree]((https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/readmes/tree.md))
     Binary Tree traversals
-    - preOrder, inOrder, postOrder
+    - preOrder, inOrder, postOrder, breadthFirst
     Binary Search Tree methods
     - add, contains
+  ### [FizzBuzzTree](https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/readmes/tree.md)
 ## Change Log
   2019/05/29 - Repository created <br/>
   2019/05/29 - Shift Array app created <br/>
@@ -39,4 +40,6 @@
   2019/06/11 - Added PseudoQueue class <br/>
   2019/06/12 - Added AnimalShelter package <br/>
   2019/06/13 - Added MultiBracketValidation package <br/>
-  2019/06/17 - Added tree package
+  2019/06/17 - Added tree package <br/>
+  2019/06/18 - Added FizzBuzzTree class <br/>
+  2019/06/19 - Added breadthFirst method to BinaryTree
