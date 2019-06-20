@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class BinaryTree<T> {
     public TreeNode<T> root;
     private ArrayList array;
+    private int max;
 
     public BinaryTree() {}
     public BinaryTree(TreeNode<T> root) {
@@ -70,4 +71,25 @@ public class BinaryTree<T> {
             inOrderHelper(root.getRightChild());
         }
     }
+
+    public int findMaximumValue(TreeNode<Integer> root) {
+        this.max = root.value;
+
+        findMaxValueHelper(root);
+
+        return this.max;
+    }
+
+    private void findMaxValueHelper(TreeNode<Integer> node) {
+        if (node.getLeftChild() != null) {
+            findMaxValueHelper(node.getLeftChild());
+        }
+
+        this.max = (max > node.value) ? max : node.value;
+
+        if (node.getRightChild() != null) {
+            findMaxValueHelper(node.getRightChild());
+        }
+    }
+
 }
