@@ -23,8 +23,9 @@
   ### [Animal Shelter](https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/readmes/animal_shelter_readme.md)
   ### [Multi Bracket Validation](https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/readmes/multi_bracket_validation.md)
   ### [Tree]((https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/readmes/tree.md))
-    Binary Tree traversals
+    Binary Tree traversals + methods
     - preOrder, inOrder, postOrder, breadthFirst
+    - findMaximumValue
     Binary Search Tree methods
     - add, contains
   ### [FizzBuzzTree](https://github.com/pettynan/data-structures-and-algorithms/blob/master/401-code-challenges/readmes/tree.md)
@@ -42,4 +43,5 @@
   2019/06/13 - Added MultiBracketValidation package <br/>
   2019/06/17 - Added tree package <br/>
   2019/06/18 - Added FizzBuzzTree class <br/>
-  2019/06/19 - Added breadthFirst method to BinaryTree
+  2019/06/19 - Added breadthFirst method to BinaryTree <br/>
+  2019/06/20 - Added findMaxValue method to BinaryTree
