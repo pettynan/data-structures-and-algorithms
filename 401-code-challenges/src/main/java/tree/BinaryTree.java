@@ -1,5 +1,7 @@
 package tree;
 
+import stacksandqueues.Queue;
+
 import java.util.ArrayList;
 
 public class BinaryTree<T> {
@@ -92,4 +94,20 @@ public class BinaryTree<T> {
         }
     }
 
+    public void breadthFirst() {
+        Queue<TreeNode<T>> queue = new Queue<>();
+        TreeNode<T> current;
+        queue.enqueue(this.root);
+
+        while(queue.getFront() != null) {
+            current = queue.dequeue();
+            if (current.getLeftChild() != null) {
+                queue.enqueue(current.getLeftChild());
+            }
+            if (current.getRightChild() != null) {
+                queue.enqueue(current.getRightChild());
+            }
+            System.out.println(current.value);
+        }
+    }
 }

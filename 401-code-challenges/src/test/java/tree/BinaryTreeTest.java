@@ -2,7 +2,8 @@ package tree;
 
 import org.junit.Before;
 import org.junit.Test;
-
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import static org.junit.Assert.*;
 
 public class BinaryTreeTest {
@@ -15,7 +16,6 @@ public class BinaryTreeTest {
        myTree.root.setLeftChild(new TreeNode(1) );
        myTree.root.setRightChild(new TreeNode(6));
        myTree.root.getLeftChild().setRightChild(new TreeNode(3));
-
 
     }
 
@@ -44,7 +44,6 @@ public class BinaryTreeTest {
         assertEquals("The method should return an array that when stringified matches the above string.",
                 expectedOutput,
                 myTree.inOrder(myTree.root).toString());
-
     }
 
     @Test
@@ -53,5 +52,17 @@ public class BinaryTreeTest {
         assertEquals("The method should return the maximum value from the binary tree, which is 6",
                 6,
                 init.findMaximumValue(myTree.root));
+    }
+
+
+    @Test
+    public void testBreadthFirst() {
+        final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        myTree.breadthFirst();
+
+        //expected: 5,1,6,3
+        assertEquals("5\n1\n6\n3\n", outContent.toString());
     }
 }
