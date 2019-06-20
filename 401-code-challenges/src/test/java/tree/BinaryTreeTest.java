@@ -2,10 +2,8 @@ package tree;
 
 import org.junit.Before;
 import org.junit.Test;
-
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-
 import static org.junit.Assert.*;
 
 public class BinaryTreeTest {
@@ -18,6 +16,7 @@ public class BinaryTreeTest {
        myTree.root.setLeftChild(new TreeNode(1) );
        myTree.root.setRightChild(new TreeNode(6));
        myTree.root.getLeftChild().setRightChild(new TreeNode(3));
+
     }
 
     @Test
@@ -46,6 +45,15 @@ public class BinaryTreeTest {
                 expectedOutput,
                 myTree.inOrder(myTree.root).toString());
     }
+
+    @Test
+    public void testFindMaxValue() {
+
+        assertEquals("The method should return the maximum value from the binary tree, which is 6",
+                6,
+                init.findMaximumValue(myTree.root));
+    }
+
 
     @Test
     public void testBreadthFirst() {
