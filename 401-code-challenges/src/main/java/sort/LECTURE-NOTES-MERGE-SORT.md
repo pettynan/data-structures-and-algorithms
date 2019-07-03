@@ -10,7 +10,7 @@ This algorithm takes in an array of integers, and uses recursion to sort it nume
     Finally, take a look at the helper method: what is passed into it, and what does it return?
 
 ## Diagram
-    [This visualization](https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif) of the merge sort algorithm is extremely useful in understanding the recursive approach the algorithm takes.
+[This visualization](https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif) of the merge sort algorithm is extremely useful in understanding the recursive approach the algorithm takes.
 
 ## Algorithm
     mergeSort // The main method
