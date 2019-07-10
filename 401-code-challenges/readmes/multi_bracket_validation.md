@@ -1,4 +1,4 @@
-# [Stacks and Queues](https://github.com/pettynan/data-structures-and-algorithms/tree/master/401-code-challenges/src/main/java/multibracketvalidation)
+# [Multi Bracket Validation](https://github.com/pettynan/data-structures-and-algorithms/tree/master/401-code-challenges/src/main/java/multibracketvalidation)
 https://github.com/pettynan/data-structures-and-algorithms/tree/master/401-code-challenges/src/main/java/multibracketvalidation
 
 ## Challenge
