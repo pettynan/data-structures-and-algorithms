@@ -1,9 +1,14 @@
 package graph;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class Graph {
     Set<GraphNode> nodes;
+
+    public Graph() {
+        this.nodes = new HashSet<GraphNode>();
+    }
 
     public GraphNode addNode(String value) {
         GraphNode node = new GraphNode(value);
