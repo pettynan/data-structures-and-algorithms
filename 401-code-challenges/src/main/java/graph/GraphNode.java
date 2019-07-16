@@ -12,6 +12,10 @@ public class GraphNode {
         this.neighbors = new LinkedList<>();
     }
 
+    public String getName() {
+        return this.name;
+    }
+
     public List<Edge> getNeighbors() {
         return this.neighbors;
     }

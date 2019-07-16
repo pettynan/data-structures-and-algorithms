@@ -8,4 +8,8 @@ public class Edge {
         this.weight = weight;
         this.node = node;
     }
+
+    public GraphNode getNode() {
+        return node;
+    }
 }
