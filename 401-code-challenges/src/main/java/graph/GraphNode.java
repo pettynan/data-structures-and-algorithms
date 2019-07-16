@@ -7,7 +7,7 @@ public class GraphNode {
     String name;
     List<Edge> neighbors;
 
-    public GraphNode(String name) {
+    GraphNode(String name) {
         this.name = name;
         this.neighbors = new LinkedList<>();
     }
