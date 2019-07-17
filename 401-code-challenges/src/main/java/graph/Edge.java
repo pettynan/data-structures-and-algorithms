@@ -12,4 +12,8 @@ public class Edge {
     public GraphNode getNode() {
         return node;
     }
+
+    public int getWeight() {
+        return weight;
+    }
 }

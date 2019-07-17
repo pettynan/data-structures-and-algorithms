@@ -23,6 +23,7 @@ public class BreadthFirst {
                 if (!nodeList.contains(edge.getNode())) {
                     nodeList.add(edge.getNode());
                     nodeQueue.add(edge.getNode());
+                    System.out.println("Added " + edge.getNode().getName());
                 }
 
             }
